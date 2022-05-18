@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+     integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <!-- End Boot -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.css">
+    <title>Neuai-MVP</title>
+    <link rel="icon" type="image/png" href="/static/logo.png">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style> 
+      div#loading {
+        width: 50px;
+        height: 50px;
+        display: none;
+        /*https://i.giphy.com/3oEjI6SIIHBdRxXI40.gif*/
+        /*https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif*/
+        background: url('https://cdn.dribbble.com/users/148670/screenshots/5252136/dots.gif') center no-repeat;
+        cursor: wait;
+        padding-left:100%;
+        }  
+    </style>
+</head>
+<body>
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <img src="/static/logo.png" style="width: 40px">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Neuai</h5>
+        <a class="btn btn-outline-primary" href="https://neuai.co">Back to our website</a>
+    </div>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Model MVP</h1>
+        <p class="lead">You can try our <b>Model</b> in this page .</p>
+    </div>
+    <div class="container">
+        
+        {% block main %}
+        {% endblock %}
+        <footer class="text-center pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+              <div class="col-12 col-md">
+                <img class="mb-2" src="/static/logo.png" alt="" width="24" height="24">
+                <small class="d-block mb-3 text-muted">&copy; 2021-2022</small>
+              </div>
+            </div>
+          </footer>
+    </div>
+
+    <script type="text/javascript">
+      function loading(){
+          $("#loading").show();
+          $("#content").hide();       
+      }
+    </script>
+
+    <!-- Boot -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <!-- End Boot -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.7.1/min/dropzone.min.js"></script>
+</body>
+</html>
